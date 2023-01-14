@@ -4,7 +4,6 @@ import {
   ContinerChartBar,
   ContinerChartBar_inner,
   ContinerChartBar_label,
-  // ConteinerCart,
 } from "./ChartBarCss";
 
 function ChartsBar({ currentPrise, maximumPrise, label }) {
