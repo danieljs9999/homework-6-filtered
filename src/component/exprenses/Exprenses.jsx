@@ -3,7 +3,7 @@ import { useState } from "react";
 import Chart from "../chart/Chart";
 import ExpenseItem from "../expenseItem/ExpenseItem";
 import ExprensesFilter from "../exprensesFilter/ExprensesFilter";
-import "./Exprenses.css";
+import { ConteinerDivExp, DivExprenses_ExprensesFilter, ExprensesUl } from "./ExprensesCss"
 
 export const Exprenses = ({ expenses }) => {
   const [selectedYear, setSelectedYear] = useState("2023");
@@ -18,12 +18,12 @@ export const Exprenses = ({ expenses }) => {
   });
 
   return (
-    <div className="divExp">
-      <div className="Exprenses_ExprensesFilter">
+    <ConteinerDivExp>
+      <DivExprenses_ExprensesFilter>
         <ExprensesFilter value={selectedYear} onChange={yearChangeHandler} />
-      </div>
+      </DivExprenses_ExprensesFilter>
       <Chart items={filteredItem} />
-      <ul className="ul">
+      <ExprensesUl>
         {filteredItem.map((elem) => {
           return (
             <ExpenseItem
@@ -34,7 +34,7 @@ export const Exprenses = ({ expenses }) => {
             />
           );
         })}
-      </ul>
-    </div>
+      </ExprensesUl>
+    </ConteinerDivExp>
   );
 };

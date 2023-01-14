@@ -1,19 +1,28 @@
 import React from "react";
-import "./ChartBar.css";
+import styled from "styled-components";
+import {
+  ContinerChartBar,
+  ContinerChartBar_inner,
+  ContinerChartBar_label,
+  // ConteinerCart,
+} from "./ChartBarCss";
 
-function ChartsBar({ maximumPrise, currentPrise, label }) {
+function ChartsBar({ currentPrise, maximumPrise, label }) {
   const fillHeight = (100 * currentPrise) / maximumPrise;
 
+  const ContinerChartBar_fill = styled.div`
+    background-color: #4826b9;
+    width: 100%;
+    transition: all 0.3s ease-out;
+    height: ${fillHeight}%;
+  `;
   return (
-    <div className="chart-bar">
-      <div className="chart-bar_inner">
-        <div
-          className="chart-bar_fill"
-          style={{ height: `${fillHeight}%` }}
-        ></div>
-      </div>
-      <p className="chart-bar_label">{label}</p>
-    </div>
+    <ContinerChartBar>
+      <ContinerChartBar_inner>
+        <ContinerChartBar_fill></ContinerChartBar_fill>
+      </ContinerChartBar_inner>
+      <ContinerChartBar_label>{label}</ContinerChartBar_label>
+    </ContinerChartBar>
   );
 }
 

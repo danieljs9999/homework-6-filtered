@@ -6,13 +6,3 @@ body {
   display: flex;
   justify-content: center;
 }
-
-.Exprensescub {
-  margin: 20px 0px;
-  width: 748px;
-  height: 104px;
-  border-radius: 12px;
-  background-color: #4b4b4b;
-  display: flex;
-  justify-content: space-between;
-}

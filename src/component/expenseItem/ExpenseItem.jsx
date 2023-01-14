@@ -1,28 +1,34 @@
 import React from "react";
-import "./ExpenseItem.css";
+
+import {
+  ContinerTextDiv,
+  LiTextCub,
+  LiSpan1,
+  LiSpan3,
+  LiTitle,
+  LiDol,
+  LiTextDolP,
+} from "./ExpenseItemCss";
 
 function ExpenseItem(props) {
   const { date, title, price } = props;
-
   const dateMonth = new Date(date).toLocaleString("ru-ru", { month: "long" });
 
   return (
     <div>
-      <div className="textDiv">
-        <ul className="textUl">
-          <li className="textcub">
-            <span className="span1">{dateMonth}</span>
-            <span className="span3">
-              {new Date(date).getFullYear().toString()}
-            </span>
-            <span className="span2">{new Date(date).getDate()}</span>
-          </li>
-          <li className="li">{title}</li>
-          <li className="dol">
-            <p className="textDol">$ {price}</p>
-          </li>
+      <ContinerTextDiv>
+        <ul>
+          <LiTextCub>
+            <LiSpan1>{dateMonth}</LiSpan1>
+            <LiSpan3>{new Date(date).getFullYear().toString()}</LiSpan3>
+            <LiSpan3>{new Date(date).getDate()}</LiSpan3>
+          </LiTextCub>
+          <LiTitle>{title}</LiTitle>
+          <LiDol>
+            <LiTextDolP>$ {price}</LiTextDolP>
+          </LiDol>
         </ul>
-      </div>
+      </ContinerTextDiv>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import ChartsBar from "./ChartsBar/ChartsBar";
-import "./Charts.css";
+import styled from "styled-components";
 
 function Chart({ items }) {
   const maximumPrise = 2000;
@@ -26,7 +26,7 @@ function Chart({ items }) {
   });
 
   return (
-    <div className="chart">
+    <ConteinerCart>
       {months.map((item) => {
         return (
           <ChartsBar
@@ -37,8 +37,19 @@ function Chart({ items }) {
           />
         );
       })}
-    </div>
+    </ConteinerCart>
   );
 }
 
 export default Chart;
+
+const ConteinerCart = styled.div`
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f8dfff;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  height: 10rem;
+  margin: 0px 10px 0px 10px;
+`;

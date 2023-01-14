@@ -1,6 +1,6 @@
 import React from "react";
 import ExspensForm from "../exspens-form/ExspensForm";
-import "./NevExprenses.css";
+import { DivButtonAdd } from "./NevExprensesCss";
 import Button from "../UL/button/Button";
 import { useState } from "react";
 
@@ -18,13 +18,13 @@ function NevExprenses({ onNewExpenseAdd }) {
           onNewExpenseAdd={onNewExpenseAdd}
         />
       ) : (
-        <div className="divButtonAdd">
+        <DivButtonAdd>
           <Button
             style={"button"}
             title="Добавить новый расход"
             onClick={showExpenseForm}
           />
-        </div>
+        </DivButtonAdd>
       )}
     </div>
   );

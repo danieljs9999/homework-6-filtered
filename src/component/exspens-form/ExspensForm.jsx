@@ -2,7 +2,13 @@ import React from "react";
 import { useState } from "react";
 import Button from "../UL/button/Button";
 import FormInput from "../UL/forminput/FormInput";
-import "./ExspensForm.css";
+import {
+  DivbuttonExspensForm,
+  DivLisConteiner,
+  FormConteiner,
+} from "./ExspensFormCss";
+// import { Button } from "../UL/button//";
+
 
 function ExspensForm({ onNewExpenseAdd, onShowForm }) {
   const [title, setTitle] = useState("");
@@ -43,8 +49,8 @@ function ExspensForm({ onNewExpenseAdd, onShowForm }) {
   };
 
   return (
-    <div className="LisConteiner">
-      <form className="formConteiner">
+    <DivLisConteiner>
+      <FormConteiner>
         <FormInput
           id="name"
           labelName="Заголовок"
@@ -71,17 +77,16 @@ function ExspensForm({ onNewExpenseAdd, onShowForm }) {
           onChange={dateInputChangeHamdler}
         />
 
-        <div className="buttonExspensForm">
-          <Button style={"button"} title="Отмена" onClick={canselHanler} />
+        <DivbuttonExspensForm>
+          <Button title="Отмена" onClick={canselHanler} />
           <Button
-            style={"button"}
             title="Добавить расходы"
             onClick={saveHandler}
             value={date}
           />
-        </div>
-      </form>
-    </div>
+        </DivbuttonExspensForm>
+      </FormConteiner>
+    </DivLisConteiner>
   );
 }
 

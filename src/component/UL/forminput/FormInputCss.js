@@ -1,15 +1,13 @@
-.input1 {
-  background-color: blue;
-}
+import styled from "styled-components";
 
-.labelForminput {
+export const LabelForminput = styled.label`
   display: block;
   font-weight: 500;
   font-size: 16px;
   margin-bottom: 14px;
-}
+`;
 
-.inputForminput {
+export const InputForminput = styled.input`
   padding: 5px 10px 5px 20px;
   width: 300px;
   height: 39px;
@@ -18,12 +16,11 @@
   background-color: #ffffff;
   font-size: 16px;
   outline: none;
-}
 
-.inputForminput:invalid {
-  outline: 1px solid red;
-}
-
-.inputForminput:active {
-  outline: 1px solid #3f3f3f;
-}
+  &:invalid {
+    outline: 1px solid red;
+  }
+  &:active {
+    outline: 1px solid #3f3f3f;
+  }
+`;

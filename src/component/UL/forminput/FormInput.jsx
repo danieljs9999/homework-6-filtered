@@ -1,15 +1,12 @@
 import React from "react";
-import "./FormInput.css";
+import { LabelForminput, InputForminput } from "./FormInputCss";
 
 function Forminput(props) {
   const { labelName, placeholder, inputType, id, ...rest } = props;
   return (
     <div>
-      <label className="labelForminput" htmlFor={id}>
-        {labelName}
-      </label>
-      <input
-        className="inputForminput"
+      <LabelForminput htmlFor={id}>{labelName}</LabelForminput>
+      <InputForminput
         placeholder={placeholder || "..."}
         id={id}
         type={inputType}

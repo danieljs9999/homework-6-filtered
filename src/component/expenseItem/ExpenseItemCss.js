@@ -1,4 +1,6 @@
-.textDiv {
+import styled from "styled-components";
+
+export const ContinerTextDiv = styled.div`
   margin-top: 0px;
   background-color: #ad9be9;
   width: 700px;
@@ -8,9 +10,9 @@
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-}
+`;
 
-.textcub {
+export const LiTextCub = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,34 +26,28 @@
   border-radius: 10px;
   box-sizing: border-box;
   padding: 0px;
-  gap: 5px;
-}
+`;
 
-.span1 {
+export const LiSpan1 = styled.span`
   font-weight: 700;
   font-size: 14px;
-}
+`;
 
-.span2 {
+export const LiSpan3 = styled.span`
   font-weight: 700;
-  font-size: 26px;
-}
+  font-size: 24px;
+`;
 
-.span3 {
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.li {
+export const LiTitle = styled.li`
   position: absolute;
   margin: -55px 0px 0px 75px;
   font-weight: 600;
   color: #ffffff;
   font-size: 18px;
   list-style: none;
-}
+`;
 
-.dol {
+export const LiDol = styled.li`
   margin: -65px 0px 0px 530px;
   width: 112px;
   height: 44px;
@@ -59,11 +55,11 @@
   border-radius: 10px;
   background-color: #40005d;
   list-style: none;
-}
+`;
 
-.textDol {
+export const LiTextDolP = styled.p`
   margin: 8px 0px 0px 20px;
   font-weight: 600;
   font-size: 20px;
   color: #ffffff;
-}
+`;
